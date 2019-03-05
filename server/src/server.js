@@ -14,9 +14,9 @@ app.use(bodyParser.json())
 app.use(cors())
 
 // urls
-app.get('/status',(req,res) => {
+app.post('/register',(req,res) => {
     res.send({
-        message: "Hello express!"
+        message: "User " + req.body.idcode + " is registered!"
     })
 })
 
